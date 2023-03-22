@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace back_end.Data.Models {
     public class User {
-        [Key]
-        [Column("user_id", Order = 1)]
         public Guid userId { get; set; }
-        [Key]
-        [Column("user_name", Order = 2)]
+        [Column("user_name")]
         public string userName { get; set; }
         [Column("user_type")]
         public UserType UserType { get; set; }

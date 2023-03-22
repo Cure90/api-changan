@@ -4,7 +4,7 @@ namespace back_end.Data.Models {
 
     [Table("setting_car")]
     public class SettingCar {
-        [Column("setting_car_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int settingCarId { get; set; }
         public Car car { get; set; }
         [Column("setting_car_name")]

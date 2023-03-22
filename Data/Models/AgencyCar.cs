@@ -1,12 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace back_end.Data.Models {
-    [Table("ageny_car")]
+    [Table("agency_car")]
     public class AgencyCar {
-        [Column("agency_car_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int agencyCarId { get; set; }
         public Car Car { get; set; }
-        [Column("agency_id")]
         public Agency Agency { get; set; }
         [Column("test_drive")]
         public bool testDrive { get; set; } = false;

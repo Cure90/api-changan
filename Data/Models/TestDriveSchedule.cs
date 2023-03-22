@@ -3,6 +3,7 @@
 namespace back_end.Data.Models {
     [Table("test_drive_schedule")]
     public class TestDriveSchedule {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int testDriveScheduleId { get; set; }
         public User User { get; set; }
         public Agency Agency { get; set; }

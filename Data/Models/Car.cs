@@ -2,8 +2,7 @@
 
 namespace back_end.Data.Models {
     public class Car {
-
-        [Column("car_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int carId { get; set; }
         public Category category { get; set; }
         [Column("car_slug")]

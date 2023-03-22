@@ -5,11 +5,10 @@ namespace back_end.Data.Models {
     [Table("user_info")]
     public class UserInfo {
         [Key]
-        [Column("user_info_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int userInfoId { get; set; }
         [ForeignKey("User")]
-        public Guid userId { get; set; }
-        [Column("agencyId")]
+        public Guid user { get; set; }
         public int? agencyId { get; set; } = null;
         public string name { get; set; }
         public DateOnly birthday { get; set; }

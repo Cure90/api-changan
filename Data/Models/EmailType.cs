@@ -3,7 +3,7 @@
 namespace back_end.Data.Models {
     [Table("cat_email_type")]
     public class EmailType {
-        [Column("cat_email_type")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int emailTypeId { get; set; }
         public string name { get; set; }
         public string listTo { get; set; }

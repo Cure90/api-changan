@@ -2,6 +2,7 @@
 
 namespace back_end.Data.Models {
     public class Layaway {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int layawayId { get; set; }
         public User User { get; set; }
         public Agency Agency { get; set; }

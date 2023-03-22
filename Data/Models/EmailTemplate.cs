@@ -3,6 +3,7 @@
 namespace back_end.Data.Models {
     [Table("email_template")]
     public class EmailTemplate {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int emailTemplateId { get; set; }
         public EmailType EmailType { get; set; }
         public string? emailName { get; set; }

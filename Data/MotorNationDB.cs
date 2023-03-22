@@ -30,17 +30,9 @@ namespace back_end.Data {
         public DbSet<ZipCode> ZipCode => Set<ZipCode>();
 
 
-        protected override void OnModelCreating( ModelBuilder modelBuilder ) {
-
-            
-            modelBuilder.Entity<User>()
-                  .HasKey(m => new { m.userId, m.userName });
-            modelBuilder.Entity<State>()
-                .HasMany<Country>(c => c.Countries)
-                .WithMany(s => s.States);
-            base.OnModelCreating(modelBuilder);
-
-        }
+        //protected override void OnModelCreating( ModelBuilder modelBuilder ) {
+        //    modelBuilder.Entity<User>().HasKey(u => new {u.userId,u.userName });
+        //}
 
     }
 }

@@ -3,8 +3,7 @@
 namespace back_end.Data.Models {
     [Table("cat_user_type")]
     public class UserType {
-
-        [Column("cat_user_type_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int userTypeId { get; set; }
         [Column("user_type")]
         public string userType { get; set; }

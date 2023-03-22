@@ -2,9 +2,10 @@
 
 namespace back_end.Data.Models {
     public class Inventory {
-        
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int inventoryId { get; set; }
+
         [ForeignKey("AgencyCar")]
-        [Column("agency_car_id")]
         public int agencyCar { get; set; }
         [Column("count_test_drive")]
         public int countTestDrive { get; set; } = 0;

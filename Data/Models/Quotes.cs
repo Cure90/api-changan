@@ -2,6 +2,7 @@
 
 namespace back_end.Data.Models {
     public class Quotes {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int quotesId { get; set; }
         public User User { get; set; }
         public Agency Agency { get; set; }

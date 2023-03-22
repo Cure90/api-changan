@@ -3,7 +3,7 @@
 namespace back_end.Data.Models {
     [Table("services_schedule")]
     public class ServicesSchedule {
-        [Column("services_schedule_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int servicesScheduleId { get; set; }
         public User User { get; set; }
         public Agency Agency { get; set; }

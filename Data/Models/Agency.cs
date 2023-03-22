@@ -2,7 +2,7 @@
 
 namespace back_end.Data.Models {
     public class Agency {
-        [Column("agency_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int agencyId { get; set; }
         [Column("agency_name")]
         public string agencyName { get; set; }

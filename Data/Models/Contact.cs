@@ -1,5 +1,8 @@
-﻿namespace back_end.Data.Models {
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace back_end.Data.Models {
     public class Contact {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int contactId { get; set; } 
         public string name { get; set; }
         public string cellPhone { get; set; }

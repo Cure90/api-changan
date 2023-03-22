@@ -6,7 +6,8 @@ namespace back_end.Data.Models {
         public Category() {
             this.Models = new HashSet<Model>();
         }
-        [Column("category_id")]
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int categoryId { get; set; }
         [Column("category_name")]
         public string categoryName { get; set; }

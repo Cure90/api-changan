@@ -3,6 +3,7 @@
 namespace back_end.Data.Models {
     [Table("cat_status")]
     public class CatStatus {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int catStatusId { get; set; }
         public string description { get; set; }
         public bool isActive { get; set; }
